@@ -53,7 +53,7 @@ public class BlogServiceImpl implements BlogService {
             if (optional.isPresent()) {
                 BlogDTO blogDTO = new BlogDTO();
                 BeanUtils.copyProperties(optional.get(), blogDTO);
-                redisCache.set(key, JSONObject.toJSONString(blogDTO));
+                redisCache.set(key, JSONObject.toJSONString(blogDTO), 3600L * 6);
                 return blogDTO;
             }
         } else {
@@ -103,6 +103,7 @@ public class BlogServiceImpl implements BlogService {
                         redisCache.lPush(key, JSONObject.toJSONString(blogDTO));
                         blogDTOS.add(blogDTO);
                     });
+                    redisCache.expired(key, 3600L * 3);
                     state.set(false);
                 } else
                     return this.findAll();
