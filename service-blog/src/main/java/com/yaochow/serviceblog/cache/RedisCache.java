@@ -149,6 +149,10 @@ public class RedisCache {
         list.leftPush(k, v);
     }
 
+    public void expired(String key, Long expireTime){
+        redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
+    }
+
     /**
      * 列表获取
      *
