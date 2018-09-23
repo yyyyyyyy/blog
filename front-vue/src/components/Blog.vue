@@ -1,14 +1,16 @@
 <template>
   <div class="log">
     <div class="content-list">
-      <ol>
-        <li class="li-title">
-          Note List
-        </li>
-        <li class="li-note" @click="get_blog_by_id(blog.id)" v-for="blog in blogs" :key="blog.id">
-          {{blog.name}}
-        </li>
-      </ol>
+      <li class="li-title">
+        Note List
+      </li>
+      <div class="list-div">
+        <ol class="ol-blog">
+          <li class="li-note" @click="get_blog_by_id(blog.id)" v-for="blog in blogs" :key="blog.id">
+            {{blog.name}}
+          </li>
+        </ol>
+      </div>
     </div>
     <div class="content-content" v-if="on_flag">
       <mavon-editor :editable="false" :subfield="false" :defaultOpen="preview" :toolbars="toolbars"

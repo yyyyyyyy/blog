@@ -130,12 +130,17 @@ body {
   position: fixed;
   margin-top: 5%;
   max-height: 600px;
-  width: 25%;
+  width: 20%;
   text-align: center;
   float: left;
   background-color: rgba(0, 0, 0, 0.21);
   padding: 0 0 0;
   border-radius: 0px;
+}
+
+.list-div {
+  overflow:scroll;
+  max-height: 500px;
 }
 
 .content-content {
@@ -215,7 +220,20 @@ body {
 }
 
 @media (max-width: 768px) {
+  .content-content {
+    margin-top: 5%;
+    height: 100%;
+    width: 73.5%;
+    text-align: center;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.21);
+    border-radius: 0px;
+  }
 
+  .list-div {
+    overflow:scroll;
+    max-height: 500px;
+  }
 }
 
 @media (max-width: 736px) {
@@ -238,23 +256,84 @@ body {
 
 }
 
-@media (max-width: 480px) {
+@media (max-height: 854px) {
+  .log {
+    width: 100%;
+    height: 100%;
+  }
+  .content-list {
+    position: relative;
+    margin-top: 0%;
+    max-height: 600px;
+    width: 100%;
+    text-align: center;
+    float: none;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 0 0 0;
+    border-radius: 0px;
+  }
 
+  .content-content {
+    overflow: scroll;
+    margin-top: 0%;
+    height: 724px;
+    width: 100%;
+    float: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.21);
+    border-radius: 0px;
+  }
+
+  .list-div {
+    overflow:scroll;
+    max-height: 100px;
+  }
+
+  .li-title {
+    border: 2px solid #791F16;
+    display: block;
+    padding: 2px 4px;
+    color: #791F16;
+  }
+
+  .li-note {
+    border: 1px solid #ddd;
+    border-top: 0;
+    display: block;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding: 2px 4px;
+    color: #dddddd;
+  }
 }
 
-@media (max-width: 414px) {
-
+@media (max-height: 812px) {
+  .content-content {
+    height: 682px;
+  }
 }
 
-@media (max-width: 384px) {
-
+@media (max-height: 736px) {
+  .content-content {
+    height: 606px;
+  }
 }
 
-@media (max-width: 375px) {
-
+@media (max-height: 667px) {
+  .content-content {
+    height: 537px;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-height: 640px) {
+  .content-content {
+    height: 510px;
+  }
+}
 
+@media (max-height: 568px) {
+  .content-content {
+    height: 438px;
+  }
 }
 
