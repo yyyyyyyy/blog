@@ -256,7 +256,7 @@ body {
 
 }
 
-@media (max-height: 854px) {
+@media (max-width: 768px) {
   .log {
     width: 100%;
     height: 100%;
@@ -307,31 +307,25 @@ body {
   }
 }
 
-@media (max-height: 812px) {
-  .content-content {
-    height: 682px;
-  }
-}
-
-@media (max-height: 736px) {
+@media (max-width: 414px) {
   .content-content {
     height: 606px;
   }
 }
 
-@media (max-height: 667px) {
+@media (max-width: 375px) {
   .content-content {
     height: 537px;
   }
 }
 
-@media (max-height: 640px) {
+@media (max-width: 360px) {
   .content-content {
     height: 510px;
   }
 }
 
-@media (max-height: 568px) {
+@media (max-width: 320px) {
   .content-content {
     height: 438px;
   }
